@@ -5,7 +5,7 @@ var app = koa();
 
 // x-response-time
 
-app.use(function *(next){
+app.use(function *(next) {
   var start = new Date;
   yield next;
   var ms = new Date - start;
@@ -15,7 +15,7 @@ app.use(function *(next){
 
 // logger
 
-app.use(function *(next){
+app.use(function *(next) {
   var start = new Date;
   yield next;
   var ms = new Date - start;
@@ -25,14 +25,14 @@ app.use(function *(next){
 
 // response
 
-app.use(function *(){
+app.use(function *() {
   this.body = 'Hello World';
 });
 
 
 // error
 
-app.on('error', function(err){
+app.on('error', function(err) {
   log.error('server error', err);
 });
 
