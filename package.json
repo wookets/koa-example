@@ -10,6 +10,6 @@
   "author": "wookets@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "koa": "^0.10.0"
+    "koa": "^2.5.1"
   }
 }
